@@ -45,6 +45,11 @@ const expenseSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    status : {
+      type:Boolean,
+      enum:["save" , "draft"],
+      default :  "draft"
+    }
   },
   { timestamps: true }
 );
